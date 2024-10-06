@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const connectDB = require('./db.js');
+const connectDB = require('./db');
 const User = require('./User');
 
 const app = express();
@@ -19,6 +19,11 @@ app.post('/register', async (req, res) => {
   } catch (error) {
     res.status(400).send({ message: 'Registration failed', error });
   }
+});
+
+// Ruta básica para verificar el servidor
+app.get('/', (req, res) => {
+  res.send('Register service is running');
 });
 
 const PORT = process.env.PORT || 4000;

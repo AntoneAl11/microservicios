@@ -24,6 +24,11 @@ app.post('/login', async (req, res) => {
   }
 });
 
+// Ruta básica para verificar el servidor
+app.get('/', (req, res) => {
+  res.send('Login service is running');
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Login service running on port ${PORT}`);
