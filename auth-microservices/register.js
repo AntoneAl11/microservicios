@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const connectDB = require('./db');
+const connectDB = require('./db.js');
 const User = require('./User');
 
 const app = express();
